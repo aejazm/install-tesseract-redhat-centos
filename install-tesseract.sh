@@ -2,13 +2,13 @@ yum -y update
 yum -y install libstdc++ autoconf automake libtool autoconf-archive pkg-config gcc gcc-c++ make libjpeg-devel libpng-devel libtiff-devel zlib-devel
 
 #Install AutoConf-Archive
-wget ftp://mirror.switch.ch/pool/4/mirror/epel/7/ppc64/a/autoconf-archive-2016.09.16-1.el7.noarch.rpm
+wget http://dev.racf.bnl.gov/yum/snapshots/rhel7/epel7-x86_64/a/autoconf-archive-2016.09.16-1.el7.noarch.rpm
 rpm -i autoconf-archive-2016.09.16-1.el7.noarch.rpm
 
 #Install Leptonica from Source
-wget http://www.leptonica.com/source/leptonica-1.74.1.tar.gz
-tar -zxvf leptonica-1.74.1.tar.gz
-cd leptonica-1.74.1
+wget http://www.leptonica.com/source/leptonica-1.74.4.tar.gz
+tar -zxvf leptonica-1.74.4.tar.gz
+cd leptonica-1.74.4
 ./autobuild
 ./configure
 make
